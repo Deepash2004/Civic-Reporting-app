@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  
+  /* CitySaathi Core Colors */
+  --background: #EBF4FF; /* Alice Blue */
+  --background-white: #FBFEFF; /* White */
+  --foreground: #0D1B52; /* Navy - primary headings */
+  --card: #FBFEFF; /* White for cards */
+  --card-foreground: #0D1B52; /* Navy */
+  --popover: #FBFEFF;
+  --popover-foreground: #0D1B52;
+  
+  /* Primary Accent */
+  --primary: #1B7AFF; /* Crayola Blue */
+  --primary-foreground: #FBFEFF; /* White text on primary */
+  
+  /* Secondary remains Alice Blue for backgrounds */
+  --secondary: #EBF4FF; /* Alice Blue */
+  --secondary-foreground: #0D1B52; /* Navy */
+  
+  /* Text Colors */
+  --muted: #EBF4FF; /* Alice Blue for muted backgrounds */
+  --muted-foreground: #848DA8; /* Gray for secondary text */
+  --accent: #EBF4FF; /* Alice Blue */
+  --accent-foreground: #1B7AFF; /* Crayola Blue for accents */
+  
+  /* Semantic Colors */
+  --destructive: #DC2626; /* Darker red for better contrast */
+  --destructive-foreground: #FBFEFF;
+  --success: #059669; /* Darker green for better contrast */
+  --success-foreground: #FBFEFF;
+  --success-background: #DCFCE7; /* Light Green background */
+  --warning: #D97706; /* Darker orange instead of yellow for better contrast */
+  --warning-foreground: #FBFEFF; /* White text on warning */
+  --warning-background: #FEF3C7; /* Light warning background */
+  --info: #1B7AFF; /* Crayola Blue for info */
+  --info-foreground: #FBFEFF;
+  --info-background: #DBEAFE; /* Light Blue background */
+  
+  /* UI Elements */
+  --border: rgba(13, 27, 82, 0.12); /* Navy with opacity */
+  --input: transparent;
+  --input-background: #FBFEFF;
+  --switch-background: #E5E7EB;
+  
+  /* Typography Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --ring: #1B7AFF; /* Crayola Blue for focus rings */
+  --radius: 0.875rem; /* 14px - slightly more rounded */
+  --radius-button: 1rem; /* 16px for buttons */
+  
+  /* Charts using semantic colors */
+  --chart-1: #1B7AFF; /* Crayola Blue */
+  --chart-2: #3EB751; /* Success Green */
+  --chart-3: #EDD81E; /* Warning Yellow */
+  --chart-4: #EF4444; /* Error Red */
+  --chart-5: #848DA8; /* Gray */
+  
+  /* Sidebar */
+  --sidebar: #FBFEFF;
+  --sidebar-foreground: #0D1B52;
+  --sidebar-primary: #1B7AFF;
+  --sidebar-primary-foreground: #FBFEFF;
+  --sidebar-accent: #EBF4FF;
+  --sidebar-accent-foreground: #0D1B52;
+  --sidebar-border: rgba(13, 27, 82, 0.12);
+  --sidebar-ring: #1B7AFF;
+}
+
+.dark {
+  /* CitySaathi Dark Mode Colors */
+  --background: #0D1117; /* Very dark navy background */
+  --background-white: #161B22; /* Dark card background */
+  --foreground: #F0F6FC; /* Light text */
+  --card: #161B22; /* Dark cards */
+  --card-foreground: #F0F6FC; /* Light text on cards */
+  --popover: #21262D; /* Darker popover */
+  --popover-foreground: #F0F6FC;
+  
+  /* Primary remains Crayola Blue but adjusted for dark mode */
+  --primary: #1B7AFF; /* Crayola Blue - stays vibrant in dark */
+  --primary-foreground: #FBFEFF; /* White text on primary */
+  
+  /* Secondary for dark backgrounds */
+  --secondary: #21262D; /* Dark secondary */
+  --secondary-foreground: #F0F6FC; /* Light text */
+  
+  /* Text Colors for dark mode */
+  --muted: #21262D; /* Dark muted backgrounds */
+  --muted-foreground: #7D8590; /* Muted gray text */
+  --accent: #21262D; /* Dark accent */
+  --accent-foreground: #1B7AFF; /* Crayola Blue for accents */
+  
+  /* Semantic Colors remain mostly the same but with dark-friendly adjustments */
+  --destructive: #F87171; /* Brighter red for dark mode */
+  --destructive-foreground: #FBFEFF;
+  --success: #34D399; /* Brighter green for dark mode */
+  --success-foreground: #0F172A; /* Dark text on bright green */
+  --success-background: #14532D; /* Dark green background */
+  --warning: #FBBF24; /* Brighter yellow for dark mode */
+  --warning-foreground: #0F172A; /* Dark text on bright yellow */
+  --warning-background: #451A03; /* Dark warning background */
+  --info: #1B7AFF; /* Crayola Blue for info */
+  --info-foreground: #FBFEFF;
+  --info-background: #1E3A8A; /* Dark blue background */
+  
+  /* UI Elements for dark mode */
+  --border: rgba(240, 246, 252, 0.12); /* Light border with opacity */
+  --input: transparent;
+  --input-background: #21262D;
+  --switch-background: #30363D;
+  
+  --ring: #1B7AFF; /* Crayola Blue for focus rings */
+  
+  /* Charts for dark mode */
+  --chart-1: #1B7AFF; /* Crayola Blue */
+  --chart-2: #3FB950; /* Success Green */
+  --chart-3: #F2CC60; /* Warning Yellow */
+  --chart-4: #F85149; /* Error Red */
+  --chart-5: #7D8590; /* Muted Gray */
+  
+  /* Sidebar for dark mode */
+  --sidebar: #161B22;
+  --sidebar-foreground: #F0F6FC;
+  --sidebar-primary: #1B7AFF;
+  --sidebar-primary-foreground: #FBFEFF;
+  --sidebar-accent: #21262D;
+  --sidebar-accent-foreground: #F0F6FC;
+  --sidebar-border: rgba(240, 246, 252, 0.12);
+  --sidebar-ring: #1B7AFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-white: var(--background-white);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-background: var(--success-background);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-background: var(--warning-background);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-info-background: var(--info-background);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-button: var(--radius-button);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.6;
+      color: var(--color-foreground);
+    }
+
+    label {
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+      color: var(--color-foreground);
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-semibold);
+      line-height: 1.4;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.4;
+    }
+  }
+}
+
+/* Utility classes for text truncation */
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
